@@ -17,23 +17,9 @@ from sklearn.pipeline import Pipeline
 
 tqdm.pandas()
 # Download necessary NLTK resources (only if not already downloaded)
-try:
-    stopwords.words('english')
-except LookupError:
-    nltk.download('stopwords')
-
-try:
-    wordnet.lemmatizer.lemmatize('test') # Check if wordnet is available
-except AttributeError: # For older NLTK versions
-    try:
-        nltk.download('wordnet')
-    except LookupError:
-        nltk.download('omw-1.4') # Open Multilingual WordNet
-
-try:
-    word_tokenize("This is a test sentence.")
-except LookupError:
-    nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt')
 
 # Title of the app
 st.title("Airlines Prediction")
