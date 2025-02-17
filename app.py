@@ -19,7 +19,7 @@ tqdm.pandas()
 # Download necessary NLTK resources (only if not already downloaded)
 nltk.download('stopwords')
 nltk.download('wordnet')
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Title of the app
 st.title("Airlines Prediction")
