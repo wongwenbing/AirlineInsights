@@ -1,6 +1,5 @@
 dill 
 scikit-learn
 nltk 
-re 
 textblob
 tqdbm
