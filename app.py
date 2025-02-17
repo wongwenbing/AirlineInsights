@@ -12,6 +12,8 @@ from textblob import TextBlob
 from tqdm import tqdm
 import numpy as np
 import string
+from sklearn.pipeline import
+
 tqdm.pandas()
 nltk.download('all')
 # Title of the app
@@ -124,6 +126,8 @@ label_mapping={0: 'British Airways',
  3: 'Scoot',
  4: 'Singapore Airlines',
  5: 'Southwest Airlines'}
+
+
 # Prediction button
 if st.button("Predict Sentiment"):
     # Use the pipeline to preprocess the input data and make predictions
