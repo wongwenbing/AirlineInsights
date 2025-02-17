@@ -115,7 +115,7 @@ def label_encoding(df):
 st.header("Enter Review Details:")
 
 # Text input
-user_text = st.text_area("Write your review here:", "This product is amazing!")
+user_text = st.text_area("Write your review here:", "We love Singapore Airlines")
 
 # Rating input (range 1-5)
 user_rating = st.slider("Rate the product (1-5):", min_value=1, max_value=5, value=3)
