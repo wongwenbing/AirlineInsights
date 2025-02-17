@@ -13,7 +13,7 @@ from tqdm import tqdm
 import numpy as np
 import string
 tqdm.pandas()
-nltk.dowload('all')
+nltk.download('all')
 # Title of the app
 st.title("Airlines Prediction")
 
