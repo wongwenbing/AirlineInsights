@@ -2,4 +2,3 @@ dill
 scikit-learn
 nltk 
 textblob
-tqdbm
