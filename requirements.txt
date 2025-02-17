@@ -1,7 +1,5 @@
 dill 
 scikitlearn
-pandas 
-numpy 
 nltk 
 re 
 textblob
