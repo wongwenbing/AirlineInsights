@@ -1,0 +1,9 @@
+dill 
+pickle
+scikitlearn
+pandas 
+numpy 
+nltk 
+re 
+textblob
+tqdbm

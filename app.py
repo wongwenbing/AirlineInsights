@@ -1,5 +1,6 @@
 import streamlit as st
 import dill
+import nltk
 import pickle
 import pandas as pd
 from nltk.corpus import stopwords
@@ -12,7 +13,7 @@ from tqdm import tqdm
 import numpy as np
 import string
 tqdm.pandas()
-
+nltk.dowload('all')
 # Title of the app
 st.title("Airlines Prediction")
 
