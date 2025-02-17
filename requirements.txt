@@ -1,5 +1,4 @@
 dill 
-scikit-learn==1.3.1
 scikit-learn==1.5.1
 nltk 
 textblob
