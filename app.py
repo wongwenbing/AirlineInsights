@@ -12,7 +12,7 @@ from textblob import TextBlob
 from tqdm import tqdm
 import numpy as np
 import string
-from sklearn.pipeline import
+from sklearn.pipeline import Pipeline
 
 tqdm.pandas()
 nltk.download('all')
@@ -22,8 +22,10 @@ st.title("Airlines Prediction")
 # Load the saved pipeline
 with open('text_preprocessing.pkl', 'rb') as f: 
     text_preprocessing = dill.load(f)
+
 with open('feature_engineering.pkl', 'rb') as f:
     feature_engineering_pipeline = dill.load(f)
+    
 with open('logreg.pkl', 'rb') as f: 
     model = pickle.load(f) 
 with open('cv.pkl', 'rb') as f: 
