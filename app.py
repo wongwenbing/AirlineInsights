@@ -24,7 +24,6 @@ with open('text_preprocessing.pkl', 'rb') as f:
     text_preprocessing = dill.load(f)
 with open('feature_engineering.pkl', 'rb') as f:
     feature_engineering_pipeline = dill.load(f)
-feature_engineering_pipeline
 with open('logreg.pkl', 'rb') as f: 
     model = pickle.load(f) 
 with open('cv.pkl', 'rb') as f: 
