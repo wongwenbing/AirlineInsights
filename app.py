@@ -5,6 +5,7 @@ import pickle
 import pandas as pd
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.stem import wordnet
 import re
 from nltk.tokenize import word_tokenize
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
@@ -15,7 +16,25 @@ import string
 from sklearn.pipeline import Pipeline
 
 tqdm.pandas()
-nltk.download('all')
+# Download necessary NLTK resources (only if not already downloaded)
+try:
+    stopwords.words('english')
+except LookupError:
+    nltk.download('stopwords')
+
+try:
+    wordnet.lemmatizer.lemmatize('test') # Check if wordnet is available
+except AttributeError: # For older NLTK versions
+    try:
+        nltk.download('wordnet')
+    except LookupError:
+        nltk.download('omw-1.4') # Open Multilingual WordNet
+
+try:
+    word_tokenize("This is a test sentence.")
+except LookupError:
+    nltk.download('punkt')
+
 # Title of the app
 st.title("Airlines Prediction")
 
@@ -25,7 +44,7 @@ with open('text_preprocessing.pkl', 'rb') as f:
 
 with open('feature_engineering.pkl', 'rb') as f:
     feature_engineering_pipeline = dill.load(f)
-    
+
 with open('logreg.pkl', 'rb') as f: 
     model = pickle.load(f) 
 with open('cv.pkl', 'rb') as f: 
